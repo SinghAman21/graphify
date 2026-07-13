@@ -175,7 +175,7 @@ function showInfo(nodeId) {{
   const neighborItems = neighborIds.map(nid => {{
     const nb = nodesDS.get(nid);
     const color = nb ? nb.color.background : '#555';
-    return `<span class="neighbor-link" style="border-left-color:${{esc(color)}}" onclick="focusNode(${{JSON.stringify(nid)}})">${{esc(nb ? nb.label : nid)}}</span>`;
+    return `<span class="neighbor-link" style="border-left-color:${{esc(color)}}" onclick="focusNode(${{esc(JSON.stringify(nid))}})">${{esc(nb ? nb.label : nid)}}</span>`;
   }}).join('');
   document.getElementById('info-content').innerHTML = `
     <div class="field"><b>${{esc(n.label)}}</b></div>
